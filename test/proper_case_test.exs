@@ -25,6 +25,14 @@ defmodule ProperCaseTest do
     assert ProperCase.to_camel_case(incoming) === expected
   end
 
+  test ".to_camel_case treats non-Enumerable structs as plain values" do
+    epoch = Ecto.DateTime.from_unix!(0, :microseconds)
+    incoming = %{ "unix_epoch" => epoch }
+    expected = %{ "unixEpoch" => epoch }
+
+    assert ProperCase.to_camel_case(incoming) === expected
+  end
+
   test ".camel_case_key camel cases a string" do
     assert ProperCase.camel_case("chewie_were_home") === "chewieWereHome"
   end
