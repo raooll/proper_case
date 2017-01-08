@@ -1,21 +1,21 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.14.3">
-    <title>404 – proper_case v1.0.0</title>
+    <title>ProperCase.JSONEncoder – proper_case v1.0.0</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-      <link rel="canonical" href="https://hexdocs.pm/proper_case/404.html" />
+      <link rel="canonical" href="https://hexdocs.pm/proper_case/ProperCase.JSONEncoder.html" />
     
     <script src="dist/sidebar_items.js"></script>
   </head>
-  <body data-type="extras">
+  <body data-type="modules">
     <script>if(localStorage.getItem('night-mode')) document.body.className += ' night-mode';</script>
 
-<div class="main">
+    <div class="main">
 <button class="sidebar-toggle">
   <i class="icon-menu"></i>
 </button>
@@ -59,14 +59,42 @@
     <div id="content" class="content-inner">
 
 
-<h2>Page not found</h2>
+      <h1>
+        <small class="visible-xs">proper_case v1.0.0</small>
+        ProperCase.JSONEncoder
+        
+        
+      </h1>
 
-<p>Sorry, but the page you were trying to get to, does not exist. You
-may want to try searching this site using the sidebar or using our
-<a href="api-reference.html" title="API Reference">API Reference</a> page to find what
-you were looking for.</p>
+      
+        <section id="moduledoc">
+          <p>  module that exposes a version of <code class="inline">encode_to_iodata!/1</code> that transforms data
+  before encoding to json. This is designed to work with phoenix.</p>
+<p>  Options:
+  transform - artity 1 function that is executed before passing the result to json_encoder.encode_to_iodata!
+  json_encoder - JSON encoder that implements encode_to_iodata!. Default: Poison</p>
+<p>  usage:</p>
+<pre><code class="elixir">def MyApp.CustomJSONEncoder do
+  use ProperCase.JSONEncoder, transform: &amp;ProperCase.to_camel_case/1
+end
 
-      <footer class="footer">
+config.exs
+
+:phoenix, :format_encoders, json: MyApp.CustomJSONEncoder</code></pre>
+
+        </section>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+          <footer class="footer">
         <p>
           <span class="line">
             Built using

@@ -5,10 +5,10 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.14.3">
-    <title>ProperCase – proper_case v1.0.0</title>
+    <title>ProperCase.JSONEncoder.CamelCase – proper_case v1.0.0</title>
     <link rel="stylesheet" href="dist/app-091c05798a.css" />
     
-      <link rel="canonical" href="https://hexdocs.pm/proper_case/ProperCase.html" />
+      <link rel="canonical" href="https://hexdocs.pm/proper_case/ProperCase.JSONEncoder.CamelCase.html" />
     
     <script src="dist/sidebar_items.js"></script>
   </head>
@@ -61,16 +61,11 @@
 
       <h1>
         <small class="visible-xs">proper_case v1.0.0</small>
-        ProperCase
+        ProperCase.JSONEncoder.CamelCase
         
         
       </h1>
 
-      
-        <section id="moduledoc">
-          <p>An Elixir library that converts keys in maps between <code class="inline">snake_case</code> and <code class="inline">camel_case</code></p>
-
-        </section>
       
 
       
@@ -90,40 +85,8 @@
     </h2>
     <div class="summary-row">
   <div class="summary-signature">
-    <a href="#camel_case/1">camel_case(key)</a>
+    <a href="#encode_to_iodata!/1">encode_to_iodata!(data)</a>
   </div>
-  
-    <div class="summary-synopsis"><p>Converts a string to <code class="inline">camelCase</code></p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#snake_case/1">snake_case(val)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Converts a string to <code class="inline">snake_case</code></p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#to_camel_case/1">to_camel_case(map)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Converts all the keys in a map to <code class="inline">camelCase</code>.
-If the map is a struct with no <a href="http://elixir-lang.org/docs/stable/elixir/Enumerable.html"><code class="inline">Enumerable</code></a> implementation,
-the struct is considered to be a single value</p>
-</div>
-  
-</div>
-<div class="summary-row">
-  <div class="summary-signature">
-    <a href="#to_snake_case/1">to_snake_case(map)</a>
-  </div>
-  
-    <div class="summary-synopsis"><p>Converts all the keys in a map to <code class="inline">snake_case</code></p>
-</div>
   
 </div>
 
@@ -147,70 +110,19 @@ the struct is considered to be a single value</p>
             </a>
             Functions
           </h1>
-          <div class="detail" id="camel_case/1">
+          <div class="detail" id="encode_to_iodata!/1">
   
   <div class="detail-header">
-    <a href="#camel_case/1" class="detail-link" title="Link to this function">
+    <a href="#encode_to_iodata!/1" class="detail-link" title="Link to this function">
       <i class="icon-link"></i>
     </a>
-    <span class="signature">camel_case(key)</span>
+    <span class="signature">encode_to_iodata!(data)</span>
     
     
     
   </div>
   <section class="docstring">
-    <p>Converts a string to <code class="inline">camelCase</code></p>
-
-  </section>
-</div>
-<div class="detail" id="snake_case/1">
-  
-  <div class="detail-header">
-    <a href="#snake_case/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">snake_case(val)</span>
     
-    
-    
-  </div>
-  <section class="docstring">
-    <p>Converts a string to <code class="inline">snake_case</code></p>
-
-  </section>
-</div>
-<div class="detail" id="to_camel_case/1">
-  
-  <div class="detail-header">
-    <a href="#to_camel_case/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">to_camel_case(map)</span>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    <p>Converts all the keys in a map to <code class="inline">camelCase</code>.
-If the map is a struct with no <a href="http://elixir-lang.org/docs/stable/elixir/Enumerable.html"><code class="inline">Enumerable</code></a> implementation,
-the struct is considered to be a single value.</p>
-
-  </section>
-</div>
-<div class="detail" id="to_snake_case/1">
-  
-  <div class="detail-header">
-    <a href="#to_snake_case/1" class="detail-link" title="Link to this function">
-      <i class="icon-link"></i>
-    </a>
-    <span class="signature">to_snake_case(map)</span>
-    
-    
-    
-  </div>
-  <section class="docstring">
-    <p>Converts all the keys in a map to <code class="inline">snake_case</code></p>
-
   </section>
 </div>
 
