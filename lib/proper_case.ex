@@ -6,12 +6,19 @@ defmodule ProperCase do
   import String, only: [first: 1, replace: 4, downcase: 1, upcase: 1]
 
   @doc """
-  Converts all the keys in a map to `camelCase`
+  Converts all the keys in a map to `camelCase`.
+  If the map is a struct with no `Enumerable` implementation,
+  the struct is considered to be a single value.
   """
   def to_camel_case(map) when is_map(map) do
-    for {key, val} <- map,
-      into: %{},
-      do: {camel_case(key), to_camel_case(val)}
+    try do
+      for {key, val} <- map,
+        into: %{},
+        do: {camel_case(key), to_camel_case(val)}
+    rescue
+      # Not Enumerable
+      Protocol.UndefinedError -> map
+    end
   end
 
   def to_camel_case(list) when is_list(list) do
@@ -75,6 +82,4 @@ defmodule ProperCase do
   def snake_case(val) do
     val |> Macro.underscore
   end
-
-
 end
