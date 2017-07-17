@@ -71,6 +71,14 @@ defmodule ProperCaseTest do
     assert ProperCase.to_snake_case(incoming_params) === expected_params
   end
 
+  test ".to_snake_case treats non-Enumerable structs as plain values" do
+    upload = %Plug.Upload{filename: "README.md", path: "README.md"}
+    incoming = %{"theUpload" => upload}
+    expected = %{"the_upload" => upload}
+
+    assert ProperCase.to_snake_case(incoming) === expected
+  end
+
   test ".snake_case converts a string to `snake_case`" do
     assert ProperCase.snake_case("getToDaChoppa") === "get_to_da_choppa"
   end
