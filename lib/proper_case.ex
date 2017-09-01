@@ -59,6 +59,10 @@ defmodule ProperCase do
     |> Atom.to_string
     |> camel_case
   end
+  
+  def camel_case(val) when is_integer(val) do
+    val
+  end
 
   @doc """
   Converts a string to `camelCase`
@@ -81,6 +85,10 @@ defmodule ProperCase do
     val
     |> Atom.to_string
     |> Macro.underscore
+  end
+  
+  def snake_case(val) when is_integer(val) do
+    val
   end
 
   @doc """
