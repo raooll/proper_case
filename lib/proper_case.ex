@@ -60,7 +60,7 @@ defmodule ProperCase do
   def camel_case(key, mode) when is_atom(key) do
     key
     |> Atom.to_string
-    |> camel_case
+    |> camel_case(mode)
   end
 
   def camel_case(val, mode) when is_integer(val) or is_float(val) do
