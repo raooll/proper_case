@@ -63,7 +63,7 @@ defmodule ProperCase do
     |> camel_case(mode)
   end
 
-  def camel_case(val, mode) when is_integer(val) or is_float(val) do
+  def camel_case(val) when is_number(val) do
     val
   end
 
@@ -95,7 +95,7 @@ defmodule ProperCase do
     |> Macro.underscore
   end
 
-  def snake_case(val) when is_integer(val) or is_float(val) do
+  def snake_case(val) when is_number(val) do
     val
   end
 
