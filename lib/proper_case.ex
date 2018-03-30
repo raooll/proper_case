@@ -55,17 +55,13 @@ defmodule ProperCase do
   @doc """
   Converts an atom to a `camelCase` string
   """
-  def camel_case(any), do: camel_case(any, :lower)
-
+  def camel_case(key), do: camel_case(key, :lower)
   def camel_case(key, mode) when is_atom(key) do
     key
     |> Atom.to_string
     |> camel_case(mode)
   end
-
-  def camel_case(val) when is_number(val) do
-    val
-  end
+  def camel_case(val, _mode) when is_number(val), do: val
 
   @doc """
   Converts a string to `camelCase`
@@ -80,7 +76,6 @@ defmodule ProperCase do
     |> Macro.camelize
     |> replace(upcase(first_char), downcase(first_char), global: false)
   end
-
   def camel_case(key, :upper) when is_binary(key) do
     key
     |> Macro.camelize
