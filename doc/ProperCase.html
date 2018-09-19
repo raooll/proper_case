@@ -5,12 +5,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="ExDoc v0.16.3">
-    <title>ProperCase – proper_case v1.1.0</title>
+    <title>ProperCase – proper_case v1.2.0</title>
     <link rel="stylesheet" href="dist/app-5b9e160cec.css" />
     
       <link rel="canonical" href="https://hexdocs.pm/proper_case/ProperCase.html" />
     
-    <script src="dist/sidebar_items-9c45edd5ea.js"></script>
+    <script src="dist/sidebar_items-00f2892754.js"></script>
     
   </head>
   <body data-type="modules">
@@ -30,7 +30,7 @@
         proper_case
       </h1>
       <h2 class="sidebar-projectVersion">
-        v1.1.0
+        v1.2.0
       </h2>
     </div>
     
@@ -66,7 +66,7 @@
 
 
       <h1>
-        <small class="visible-xs">proper_case v1.1.0</small>
+        <small class="visible-xs">proper_case v1.2.0</small>
         ProperCase
         
       </h1>
@@ -99,6 +99,15 @@
     <a href="#camel_case/1">camel_case(key)</a>
   </div>
   
+    <div class="summary-synopsis"><p>Converts an atom to a <code class="inline">camelCase</code> string</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#camel_case/2">camel_case(key, mode)</a>
+  </div>
+  
     <div class="summary-synopsis"><p>Converts a string to <code class="inline">camelCase</code></p>
 </div>
   
@@ -114,13 +123,19 @@
 </div>
 <div class="summary-row">
   <div class="summary-signature">
-    <a href="#to_camel_case/1">to_camel_case(map)</a>
+    <a href="#to_camel_case/1">to_camel_case(any)</a>
   </div>
   
-    <div class="summary-synopsis"><p>Converts all the keys in a map to <code class="inline">camelCase</code>.
+    <div class="summary-synopsis"><p>Converts all the keys in a map to <code class="inline">camelCase</code> if mode is :lower or <code class="inline">CamleCase</code> if mode is :upper.
 If the map is a struct with no <a href="https://hexdocs.pm/elixir/Enumerable.html"><code class="inline">Enumerable</code></a> implementation,
 the struct is considered to be a single value</p>
 </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#to_camel_case/2">to_camel_case(map, mode)</a>
+  </div>
   
 </div>
 <div class="summary-row">
@@ -168,6 +183,24 @@ the struct is considered to be a single value</p>
     
   </div>
   <section class="docstring">
+    <p>Converts an atom to a <code class="inline">camelCase</code> string</p>
+
+  </section>
+</div>
+<div class="detail" id="camel_case/2">
+  
+  
+  <div class="detail-header">
+    <a href="#camel_case/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">camel_case(key, mode)</span>
+    
+    
+    
+  </div>
+  <section class="docstring">
     <p>Converts a string to <code class="inline">camelCase</code></p>
 
   </section>
@@ -198,16 +231,33 @@ the struct is considered to be a single value</p>
       <span class="icon-link" aria-hidden="true"></span>
       <span class="sr-only">Link to this function</span>
     </a>
-    <span class="signature">to_camel_case(map)</span>
+    <span class="signature">to_camel_case(any)</span>
     
     
     
   </div>
   <section class="docstring">
-    <p>Converts all the keys in a map to <code class="inline">camelCase</code>.
+    <p>Converts all the keys in a map to <code class="inline">camelCase</code> if mode is :lower or <code class="inline">CamleCase</code> if mode is :upper.
 If the map is a struct with no <a href="https://hexdocs.pm/elixir/Enumerable.html"><code class="inline">Enumerable</code></a> implementation,
 the struct is considered to be a single value.</p>
 
+  </section>
+</div>
+<div class="detail" id="to_camel_case/2">
+  
+  
+  <div class="detail-header">
+    <a href="#to_camel_case/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">to_camel_case(map, mode)</span>
+    
+    
+    
+  </div>
+  <section class="docstring">
+    
   </section>
 </div>
 <div class="detail" id="to_snake_case/1">
