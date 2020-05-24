@@ -33,7 +33,6 @@ defmodule ProperCaseTest do
     epoch = DateTime.from_unix!(0, :microsecond)
     incoming = %{"unix_epoch" => epoch}
     expected = %{"unixEpoch" => epoch}
-
     assert ProperCase.to_camel_case(incoming) === expected
   end
 
@@ -129,6 +128,10 @@ defmodule ProperCaseTest do
 
   test ".snake_case converts an atom to snake_case string" do
     assert ProperCase.snake_case(:getToDaChoppa) === "get_to_da_choppa"
+  end
+
+  test ".snake_case converts string with spaces to `snake_case`" do
+    assert ProperCase.snake_case("get To Da Choppa") === "get_to_da_choppa"
   end
 
   test ".snake_case converts a number properly" do
