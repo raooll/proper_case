@@ -29,12 +29,17 @@ defmodule ProperCase do
   end
 
   def to_camel_case(final_val, _mode), do: final_val
-
+  
   @doc """
   Converts all the keys in a map to `snake_case`.
   If the map is a struct with no `Enumerable` implementation,
   the struct is considered to be a single value.
   """
+  
+  def to_snake_case(struct) when is_struct(struct) do
+    struct
+  end
+  
   def to_snake_case(map) when is_map(map) do
     try do
       for {key, val} <- map,
